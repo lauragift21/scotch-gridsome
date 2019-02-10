@@ -1,31 +1,46 @@
 <template>
   <Layout>
-    
-    <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="135" />
-    
-    <h1>Hello, world!</h1>
-   
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-    </p>
-
+    <div class="content">
+      <div class="card" v-for="edge in $page.allFaker.edges" :key="edge.node.id">
+        <div class="card-content">
+          <p class="title">{{ edge.node.author }}</p>
+          <p class="subtitle">{{ edge.node.email }}</p>
+          <p class="subtitle">{{ edge.node.title }}</p>
+        </div>
+      </div>
+    </div>
   </Layout>
 </template>
 
+<page-query>
+query allFaker {
+  allFaker (perPage: 10) {
+    edges {
+      node {
+        id,
+        author,
+        thumbnail,
+        avatar,
+        email,
+        content,
+        title,
+        slug,
+        date
+      }
+    }
+  }
+}
+</page-query>
+
 <script>
 export default {
- // ..
-}
+  // ..
+};
 </script>
 
 <style>
-.home-links a {
-  margin-right: 1rem;
+.card {
+  border: 2px solid #333;
+  margin: 20px;
 }
 </style>

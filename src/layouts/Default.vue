@@ -1,13 +1,9 @@
 <template>
-  <div class="layout">
+  <div class="container">
     <header class="header">
-      <strong>
-        <g-link :to="{ name: 'home' }">{{ $static.metaData.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" :to="{ name: 'home' }">Home</g-link>
-        <g-link class="nav__link" :to="{ name: 'about' }">About</g-link>
-      </nav>
+      <div class="title is-size-2">
+        {{ $static.metaData.siteName }}
+      </div>
     </header>
     <slot/>
   </div>
@@ -30,7 +26,7 @@ body {
 }
 
 .layout {
-  max-width: 760px;
+  max-width: 960px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
