@@ -1,9 +1,8 @@
 <template>
   <div class="container">
     <header class="header">
-      <div class="title is-size-2">
-        {{ $static.metaData.siteName }}
-      </div>
+      <g-link class="title is-size-3" :to="{ name: 'home'}">{{ $static.metaData.siteName }}</g-link>
+      <g-link class="subtitle is-size-3" :to="{ name: 'about' }">About</g-link>
     </header>
     <slot/>
   </div>
@@ -19,9 +18,10 @@ query {
 
 <style>
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   line-height: 1.5;
 }
 

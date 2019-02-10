@@ -5,9 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Fancy Random Generator',
+  siteName: 'Fancy Random Profile',
   siteUrl: '',
-  siteDescription: 'A directory of random humans profile',
+  siteDescription: 'A directory listing of random humans profile',
   plugins: [
     {
       use: '@gridsome/source-faker',

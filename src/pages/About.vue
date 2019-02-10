@@ -1,10 +1,14 @@
 <template>
-  <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+  <Layout class="content">
+    <p class="title is-4">
+      Fancy Random Profile is a website listing random people's profile and details.
+    </p>
+   <a href="https://github.com/lauragift21/scotch-gridsome">GitHub Repo Available here</a>
   </Layout>
 </template>
 
 <script>
-export default {}
+export default {
+  // ...
+}
 </script>
