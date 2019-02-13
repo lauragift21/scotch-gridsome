@@ -4,7 +4,7 @@
       <div class="card" v-for="edge in $page.allFaker.edges" :key="edge.node.id">
         <div class="card-content">
           <p class="title"> {{ edge.node.author }}</p>
-          <p class="subtitle"> <i>Contact Email:</i> {{ edge.node.email }}</p>
+          <p class="subtitle"> <i>Contact Email:</i> {{ edge.node.email.src }}</p>
           <p class="subtitle"> <i> Profile: </i> {{ edge.node.title }}</p>
         </div>
       </div>
@@ -18,10 +18,10 @@ query allFaker {
     edges {
       node {
         id,
+        email,
         author,
         thumbnail,
         avatar,
-        email,
         content,
         title,
         slug,
